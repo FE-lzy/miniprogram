@@ -9,7 +9,14 @@ Page({
     motto: 'Hi 开发者！',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    PageCur: 'trace'
+  },
+  // 跳转
+  NavChange(e) {
+    this.setData({
+      PageCur: e.currentTarget.dataset.cur
+    })
   },
   //事件处理函数
   bindViewTap: function() {

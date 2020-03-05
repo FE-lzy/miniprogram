@@ -1,17 +1,20 @@
 <cu-custom bgColor="bg-gradual-green">
-  <view slot="content">ColorUI 空白模板</view>
+  <view slot="content">追溯</view>
 </cu-custom>
-<view class="margin-xl padding-xl bg-white radius shadow shadow-lg">
-  <view class="flex justify-center">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
-    <block wx:else>
-      <view class='text-center'>
-        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
-        <view class="padding">{{userInfo.nickName}}</view>
-      </view>
-    </block>
+<trace wx:if="{{PageCur=='trace'}}"></trace>
+<mine wx:if="{{PageCur=='mine'}}"></mine>
+
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="trace">
+    <view class='cuIcon-cu-image'>
+      <image src="/assets/img/trace{{PageCur=='trace'?'_active':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='trace'?'text-green':'text-gray'}}">首页</view>
   </view>
-</view>
-<view class="text-center margin-top">
-  <text class="text-grey text-xl">{{motto}}</text>
+  <view class="action" bindtap="NavChange" data-cur="mine">
+    <view class='cuIcon-cu-image'>
+      <image src="/assets/img/mine{{PageCur=='mine'?'_active':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='mine'?'text-green':'text-gray'}}">关于</view>
+  </view>
 </view>
