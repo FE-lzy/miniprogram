@@ -1,8 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/trace/trace",
-    "pages/mine/mine"
+    "pages/trace/trace/trace",
+    "pages/mine/mine",
+    "pages/trace/adminResult/adminResult",
+    "pages/trace/printResult/printResult",
+    "pages/trace/merchantResult/merchantResult"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,30 @@
+<!--pages/trace/merchantResult/merchantResult.wxml-->
+<!--pages/trace/adminResult/adminResult.wxml-->
+ <cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">结果</view>
+  </cu-custom>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 编号
+  </view>
+  <view class="action">
+    <text class="text-grey text-sm">100000001-100000021,100000001-100000021</text>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 创建时间
+  </view>
+  <view class="action">
+    <text class="text-grey text-sm">2020-1-1 10:10</text>
+  </view>
+</view>
+
+<view class="padding-xl">
+  <button class="cu-btn block bg-green margin-tb-sm lg" bindtap="handleRecord">
+    <text class="iconfont-spin"></text> 发送到公司
+  </button>
+</view>

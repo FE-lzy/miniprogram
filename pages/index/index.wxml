@@ -1,5 +1,5 @@
 <cu-custom bgColor="bg-gradual-green">
-  <view slot="content">追溯</view>
+  <view slot="content">首页</view>
 </cu-custom>
 <trace wx:if="{{PageCur=='trace'}}"></trace>
 <mine wx:if="{{PageCur=='mine'}}"></mine>
@@ -15,6 +15,6 @@
     <view class='cuIcon-cu-image'>
       <image src="/assets/img/mine{{PageCur=='mine'?'_active':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='mine'?'text-green':'text-gray'}}">关于</view>
+    <view class="{{PageCur=='mine'?'text-green':'text-gray'}}">我的</view>
   </view>
 </view>

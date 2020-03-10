@@ -1,13 +1,42 @@
 // pages/trace/trace.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    info:Object
   },
-
+  scanCode(){
+    var that = this;
+    wx.scanCode({
+      success(res){
+        that.setData({
+          info:res
+        })
+        console.log(res)
+      }
+    })  
+  },
+  /**
+   * 跳转到用户员管理页面
+   */
+  jumpAdminResult(){
+    wx.navigateTo({
+      url: '/pages/trace/adminResult/adminResult',
+    })
+  },
+  jumpPrintResult(){
+    wx.navigateTo({
+      url: '/pages/trace/printResult/printResult',
+    })
+  },
+  jumpmerchantResult(){
+    wx.navigateTo({
+      url: '/pages/trace/merchantResult/merchantResult',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

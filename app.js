@@ -9,6 +9,7 @@ App({
     // 登录
     wx.login({
       success: res => {
+        console.log(res)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
@@ -38,15 +39,16 @@ App({
         this.globalData.StatusBar = e.statusBarHeight;
         let capsule = wx.getMenuButtonBoundingClientRect();
         if (capsule) {
-         	this.globalData.Custom = capsule;
-        	this.globalData.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;
+          this.globalData.Custom = capsule;
+          this.globalData.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;
         } else {
-        	this.globalData.CustomBar = e.statusBarHeight + 50;
+          this.globalData.CustomBar = e.statusBarHeight + 50;
         }
       }
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    openid: 'o4Kns0Kyz77od5Z4f6Jkezyshnbo'
   }
 })

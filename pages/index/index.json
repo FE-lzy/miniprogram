@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "trace":"/pages/trace/trace",
+    "trace":"/pages/trace/trace/trace",
     "mine": "/pages/mine/mine"
   }
 }

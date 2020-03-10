@@ -1,0 +1,49 @@
+<!--pages/trace/adminResult/adminResult.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">结果</view>
+</cu-custom>
+<view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+  <view class="cu-item">
+    <view class="content text-cut">
+      <image src="/assets/img/jin.png" class="png" mode="aspectFit"></image>
+      <text class="text-grey">303个(12020100000001-12020100000304)(12020100000001-12020100000304)</text>
+    </view>
+    <view class="action">
+      <view class="cu-tag round bg-green sm">详情</view>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content text-cut">
+      <image src="/assets/img/yin.png" class="png" mode="aspectFit"></image>
+      <text class="text-grey">50个(12020100000001-12020100000304)(12020100000001-12020100000304)</text>
+    </view>
+    <view class="action">
+      <view class="cu-tag round bg-green sm">详情</view>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content text-cut">
+      <image src="/assets/img/chaye.png" class="png" mode="aspectFit"></image>
+      <text class="text-grey">102个(12020100000001-12020100000304)(12020100000001-12020100000304)</text>
+    </view>
+    <view class="action">
+      <view class="cu-tag round bg-green sm">详情</view>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-green "></text> 创建时间
+  </view>
+  <view class="action">
+    <text class="text-grey text-sm">2020-1-1 10:10</text>
+  </view>
+</view>
+
+<view class="padding-xl">
+  <button class="cu-btn block bg-green margin-tb-sm lg" bindtap="handleRecord">
+    <text class="iconfont-spin"></text> 付款并激活
+  </button>
+</view>
