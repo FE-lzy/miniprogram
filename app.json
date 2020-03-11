@@ -5,8 +5,9 @@
     "pages/mine/mine",
     "pages/trace/adminResult/adminResult",
     "pages/trace/printResult/printResult",
-    "pages/trace/merchantResult/merchantResult"
-
+    "pages/trace/merchantResult/merchantResult",
+    "pages/trace/antiResult/antiResult",
+    "pages/user/applyforPos/applyforPos"
   ],
   "window": {
     "backgroundTextStyle": "light",

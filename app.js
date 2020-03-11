@@ -49,6 +49,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    openid: 'o4Kns0Kyz77od5Z4f6Jkezyshnbo'
+    openid: 'o4Kns0Kyz77od5Z4f6Jkezyshnbo',
+    baseUrl:'http://localhost:3000'
   }
 })
