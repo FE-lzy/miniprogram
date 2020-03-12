@@ -1,20 +1,23 @@
 <cu-custom bgColor="bg-gradual-green">
   <view slot="content">首页</view>
 </cu-custom>
+
 <trace wx:if="{{PageCur=='trace'}}"></trace>
-<mine wx:if="{{PageCur=='mine'}}"></mine>
+<personal wx:if="{{PageCur=='personal'}}"></personal>
+<!-- 获取用户基本信息 -->
+<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
 
 <view class="cu-bar tabbar bg-white shadow foot">
   <view class="action" bindtap="NavChange" data-cur="trace">
     <view class='cuIcon-cu-image'>
-      <image src="/assets/img/trace{{PageCur=='trace'?'_active':''}}.png"></image>
+      <image src="/static/img/trace{{PageCur=='trace'?'_active':''}}.png"></image>
     </view>
     <view class="{{PageCur=='trace'?'text-green':'text-gray'}}">首页</view>
   </view>
-  <view class="action" bindtap="NavChange" data-cur="mine">
+  <view class="action" bindtap="NavChange" data-cur="personal">
     <view class='cuIcon-cu-image'>
-      <image src="/assets/img/mine{{PageCur=='mine'?'_active':''}}.png"></image>
+      <image src="/static/img/mine{{PageCur=='personal'?'_active':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='mine'?'text-green':'text-gray'}}">我的</view>
+    <view class="{{PageCur=='personal'?'text-green':'text-gray'}}">我的</view>
   </view>
 </view>

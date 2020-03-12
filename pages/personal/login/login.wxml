@@ -1,0 +1,5 @@
+<!--pages/personal/login/login.wxml-->
+<cu-custom bgColor="bg-gradual-green">
+  <view slot="content">登录</view>
+</cu-custom>
+<text bindtap="jumpback">返回</text>

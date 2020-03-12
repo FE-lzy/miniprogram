@@ -1,41 +1,24 @@
-// pages/trace/trace.js
-
+// pages/personal/login/login.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    info:Object
+
   },
-  scanCode(){
-    var that = this;
-    wx.scanCode({
-      success(res){
-        that.setData({
-          info:res
+  jumpback(){
+    app.globalData.isLogin = true;
+    wx.navigateBack({
+      delta: 1, 
+      success() {
+        wx.showToast({
+          title: '登录成功',
         })
-        console.log(res)
       }
-    })  
-  },
-  /**
-   * 跳转到用户员管理页面
-   */
-  jumpAdminResult(){
-    wx.navigateTo({
-      url: '/pages/trace/adminResult/adminResult',
     })
-  },
-  jumpPrintResult(){
-    wx.navigateTo({
-      url: '/pages/trace/printResult/printResult',
-    })
-  },
-  jumpmerchantResult(){
-    wx.navigateTo({
-      url: '/pages/trace/merchantResult/merchantResult',
-    })
+    console.log('登录状态', app.globalData.isLogin)
   },
   /**
    * 生命周期函数--监听页面加载

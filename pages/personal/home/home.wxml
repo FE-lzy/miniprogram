@@ -1,0 +1,18 @@
+<!--pages/personal/home/home.wxml-->
+
+<view class="margin-xl padding-xl bg-white radius shadow shadow-lg">
+  <view class="flex justify-center">
+    <block>
+      <view class='text-center'>
+        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
+        <view class="padding">{{userInfo.nickName}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="text-center margin-top" wx:if="{{!isLogin}}" bindtap="jumpLogin">
+  <text class="text-grey text-xl">点击登录</text>
+</view>
+<view class="text-center margin-top" wx:else bindtap="handleBowOut">
+  <text class="text-grey text-xl"> 已登录，退出</text>
+</view>

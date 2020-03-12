@@ -4,7 +4,7 @@ import {
 } from './config.js'
 
 function request(options) {
-  console.log(options)
+  // console.log(options)
   wx.showLoading({
     title: '数据加载中ing',
   })
@@ -19,7 +19,7 @@ function request(options) {
         'content-type': 'application/json'
       },
       success: function(res) {
-        console.log(res)
+        // console.log(res)
         resolve(res.data)
       },
       fail: reject,

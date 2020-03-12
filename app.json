@@ -1,13 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/trace/trace/trace",
-    "pages/mine/mine",
-    "pages/trace/adminResult/adminResult",
-    "pages/trace/printResult/printResult",
-    "pages/trace/merchantResult/merchantResult",
-    "pages/trace/antiResult/antiResult",
-    "pages/user/applyforPos/applyforPos"
+    "pages/personal/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
